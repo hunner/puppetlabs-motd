@@ -50,7 +50,12 @@ Gemfile:
     ':development':
       - gem: puppet-blacksmith
         version: '~> 3.4'
+      - gem: 'github_changelog_generator'
+        from_env: 'GITHUB_CHANGELOG_GENERATOR_VERSION'
+        version: 'git@github.com:hunner/github-changelog-generator#c72ab3f'
+
 
 Rakefile:
+  changelog_generator_since_tag: "1.7.0"
   requires:
     - puppet_blacksmith/rake_tasks
